@@ -1,0 +1,39 @@
+.container {
+  max-width: 500px;
+}
+
+.profile-picture {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.edit-icon-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+.edit-icon {
+  color: gray;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.profile-picture input[type="file"] {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}

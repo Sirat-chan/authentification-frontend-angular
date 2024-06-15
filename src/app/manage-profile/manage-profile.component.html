@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <h2 class="text-center">User Profile</h2>
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="form-group text-center">
+      <div class="profile-picture">
+        <img [src]="profileImage || 'https://i.imgur.com/bDLhJiP.jpg'" class="rounded-circle img-thumbnail">
+        <div class="edit-icon-container">
+          <label for="profileImage" class="edit-icon">
+            <i class="fas fa-camera"></i>
+          </label>
+        </div>
+        <input type="file" id="profileImage" (change)="onFileChange($event)" class="form-control-file">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" class="form-control" formControlName="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" class="form-control" formControlName="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" class="form-control" formControlName="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid">Update Profile</button>
+  </form>
+</div>
