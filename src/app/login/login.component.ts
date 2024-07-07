@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {AuthentificationService} from "../services/authentification.service";
 import {Router} from "@angular/router";
+import {ModalService} from "../services/modal.service";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent {
   formLogin!: FormGroup;
 
   constructor(private fb: FormBuilder, private authService: AuthentificationService,
-              private router: Router) {
+              private router: Router, private modalService: ModalService) {
   }
 
   ngOnInit(){
@@ -36,6 +37,11 @@ export class LoginComponent {
         console.log(err);
       }
     })
+  }
+
+
+  navigateToSignup() {
+    this.router.navigate(['/signup']);
   }
 
 }

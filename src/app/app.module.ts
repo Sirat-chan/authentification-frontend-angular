@@ -13,6 +13,7 @@ import {AppHttpInterceptor} from "./interceptors/app-http.interceptor";
 import { NewUserComponent } from './new-user/new-user.component';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
 import { ManageProfileComponent } from './manage-profile/manage-profile.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ManageProfileComponent } from './manage-profile/manage-profile.componen
     NavbarComponent,
     NewUserComponent,
     NotAuthorizedComponent,
-    ManageProfileComponent
+    ManageProfileComponent,
+    SignupComponent
   ],
     imports: [
         BrowserModule,

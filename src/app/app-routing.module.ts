@@ -8,10 +8,12 @@ import {NewUserComponent} from "./new-user/new-user.component";
 import {NotAuthorizedComponent} from "./not-authorized/not-authorized.component";
 import {AuthorizationGuard} from "./guards/authorization.guard";
 import {ManageProfileComponent} from "./manage-profile/manage-profile.component";
+import {SignupComponent} from "./signup/signup.component";
 
 const routes: Routes = [
   {path : '', redirectTo: '/login', pathMatch: 'full'},
   {path : 'login' , component: LoginComponent},
+  { path: 'signup', component: SignupComponent },
   {path : 'admin' , component: AdminTemplateComponent, canActivate : [AuthentificationGuard]
   , children :[
     {path : 'test' , component: TestComponent},

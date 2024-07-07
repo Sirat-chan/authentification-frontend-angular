@@ -10,13 +10,13 @@
           <!-- User name input -->
           <div data-mdb-input-init class="form-outline mb-4">
             <label class="form-label">Username</label>
-            <input type="text" class="form-control form-control-lg" formControlName = "username" />
+            <input type="text" class="form-control form-control-lg" formControlName="username" />
           </div>
 
           <!-- Password input -->
           <div data-mdb-input-init class="form-outline mb-4">
             <label class="form-label">Password</label>
-            <input type="password" class="form-control form-control-lg" formControlName = "password" />
+            <input type="password" class="form-control form-control-lg" formControlName="password" />
           </div>
 
           <div class="d-flex justify-content-around align-items-center mb-4">
@@ -35,14 +35,10 @@
             <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
           </div>
 
-          <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
-             role="button">
-            <i class="fab fa-facebook-f me-2"></i>Login with LinkedIn
-          </a>
-          <a data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
-             role="button">
-            <i class="fab fa-twitter me-2"></i>Continue with Twitter</a>
-
+          <!-- Button to trigger navigation -->
+          <button type="button" class="btn btn-primary btn-lg btn-block" (click)="navigateToSignup()">
+            <i class="fas fa-envelope me-2"></i>Login with Email
+          </button>
         </form>
       </div>
     </div>
